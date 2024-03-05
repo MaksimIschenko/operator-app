@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1701</width>
+    <height>742</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: black;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>141</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="lb_connection_2">
+       <property name="text">
+        <string>Запрос телеметрии</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_gps">
+       <property name="text">
+        <string>GPS</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_imu">
+       <property name="text">
+        <string>IMU</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cb_auto_gps">
+       <property name="text">
+        <string>Авто запрос GPS</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cb_auto_imu">
+       <property name="text">
+        <string>Авто запрос IMU</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>141</width>
+      <height>78</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="lb_name_map_5">
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string>Подключение клиента</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_server_start">
+       <property name="text">
+        <string>Подкл</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_server_stop">
+       <property name="text">
+        <string>Откл</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>141</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Выбор режима</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_mnl_mode">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Ручной</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_rmt_mode">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Дистанционный</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_auto_mode">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Автономный</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>141</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="lb_mtr_ctrl">
+       <property name="text">
+        <string>Управление ДВС</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_motor_start">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Старт</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_motor_stop">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Стоп</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>142</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QLabel" name="lb_set_power">
+       <property name="text">
+        <string>Задание мощности ДВС</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="le_pwr_mnl">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>141</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QLabel" name="lb_name_map_4">
+       <property name="maximumSize">
+        <size>
+         <width>101</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string>Инфо</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="lb_status">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Статус</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_status_val">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Не подключен</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="lb_rmode">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Режим</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_rmode_val">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Не выбрано</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>220</y>
+      <width>141</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_7">
+     <item>
+      <widget class="QLabel" name="lb_man_cmd">
+       <property name="text">
+        <string>Ввод команды вручную</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="le_mnl_cmd">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_mnl_cmd">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Отправить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>420</y>
+      <width>461</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Терминал</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="terminal_window">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>8</pointsize>
+         <italic>false</italic>
+         <bold>false</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_clean_textBrw">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Очистить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>10</y>
+      <width>131</width>
+      <height>184</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_9">
+     <item>
+      <widget class="QLabel" name="lb_name_map_2">
+       <property name="maximumSize">
+        <size>
+         <width>101</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string>GPS</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="lb_latitude">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Latitide</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_latitude_val">
+         <property name="text">
+          <string>Latitide</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="lb_NS">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>NS</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_NS_val">
+         <property name="text">
+          <string>NS</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="lb_longitude">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Longitude</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_longitude_val">
+         <property name="text">
+          <string>Longitude</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="lb_EW">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>EW</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_EW_val">
+         <property name="text">
+          <string>EW</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="lb_altitude">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Altitude</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_altitude_val">
+         <property name="text">
+          <string>Altitude</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="lb_grndspeed">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>GrndSpeed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_grndspeed_val">
+         <property name="text">
+          <string>GrndSpeed</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>210</y>
+      <width>131</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_10">
+     <item>
+      <widget class="QLabel" name="lb_name_map_3">
+       <property name="maximumSize">
+        <size>
+         <width>101</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string>IMU</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QLabel" name="lb_axl_x">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Pitch</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_axl_x_val">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>AXL_x</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QLabel" name="lb_axl_y">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Roll</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_axl_y_val">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>AXL_y</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <widget class="QLabel" name="lb_axl_z">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Yaw</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lb_axl_z_val">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>AXL_z</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>420</y>
+      <width>541</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_12">
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Координаты точек</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="table_points"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_delete_points">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Очистить точки</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>14</y>
+      <width>543</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_11">
+     <item>
+      <widget class="QLabel" name="lb_name_map">
+       <property name="maximumSize">
+        <size>
+         <width>101</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string>Карта</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWebEngineView" name="webEngineView">
+       <property name="url">
+        <url>
+         <string>about:blank</string>
+        </url>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>13</y>
+      <width>642</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_13">
+     <item>
+      <widget class="QLabel" name="lb_name_camera_2">
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string>Видеопоток с камеры</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lb_camera">
+       <property name="minimumSize">
+        <size>
+         <width>640</width>
+         <height>360</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>640</width>
+         <height>360</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: grey;
+border: None;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <item>
+        <widget class="QPushButton" name="btn_start_camera">
+         <property name="text">
+          <string>Запустить</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_stop_camera">
+         <property name="text">
+          <string>Остановить</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1701</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
